@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-bg:      var(--bg);
+  --color-bg2:     var(--bg2);
+  --color-bg3:     var(--bg3);
+  --color-tx:      var(--tx);
+  --color-tx2:     var(--tx2);
+  --color-tx3:     var(--tx3);
+  --color-border:  var(--border);
+  --color-accent:  var(--accent);
+  --color-like:    var(--like);
+  --color-retweet: var(--retweet);
+}
+
+:root {
+  --bg:      #ffffff;
+  --bg2:     #f7f9f9;
+  --bg3:     #eff3f4;
+  --tx:      #0f1419;
+  --tx2:     #536471;
+  --tx3:     #8b98a5;
+  --border:  #eff3f4;
+  --accent:  #1d9bf0;
+  --like:    #f91880;
+  --retweet: #00ba7c;
+}
+
+.dark {
+  --bg:     #15202b;
+  --bg2:    #1e2732;
+  --bg3:    #273340;
+  --tx:     #e7e9ea;
+  --tx2:    #8b98a5;
+  --tx3:    #536471;
+  --border: #38444d;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--tx);
+}
