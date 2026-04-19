@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const newRequest = axios.create({
-  baseURL:         process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5500/api',
+  baseURL:         process.env.NEXT_PUBLIC_API_URL ?'http://localhost:5500/api': '/api',
   withCredentials: true,   // ← sends cookie automatically with every request
 })
 
