@@ -5,6 +5,8 @@ const newRequest = axios.create({
   withCredentials: true,   // ← sends cookie automatically with every request
 })
 
+console.log("NEXT_PUBLIC_API_URL", process.env.NEXT_PUBLIC_API_URL)
+
 // if session expired redirect to login
 newRequest.interceptors.response.use(
   (response) => response,

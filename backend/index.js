@@ -21,7 +21,7 @@ app.use(cors({
   credentials: true,         
 }))
 
-
+console.log("CORS ORIGIN:", process.env.FRONTEND_URL)
 
 app.use(express.json());
 app.use(cookieParser())
