@@ -9,8 +9,8 @@ export const createSession = async (req, res) => {
 
     res.cookie('session', sessionCookie, {
       httpOnly: true,
-      sameSite: isProd ? 'none' : 'lax',
-      secure: isProd,
+      sameSite:'none',
+      secure: true,
       maxAge:   expiresIn,
     })
     res.json({ success: true })
@@ -22,8 +22,8 @@ export const createSession = async (req, res) => {
 export const deleteSession = async (req, res) => {
   res.clearCookie('session', {
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
-    sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+    secure: true,
+    sameSite: 'none' ,
   })
 
   res.json({ success: true })
