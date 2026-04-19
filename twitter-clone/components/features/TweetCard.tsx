@@ -2,7 +2,6 @@
 'use client'
 import { useState } from 'react'
 import { Heart, MessageCircle, Repeat2, BarChart2, Bookmark } from 'lucide-react'
-import { TweetType } from '@/types/Tweet'
 import { Avatar } from '@/components/ui/Avatar'
 import { TweetContent } from './TweetContent'
 import { cn } from '@/utils/cn'

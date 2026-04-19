@@ -14,7 +14,7 @@ export function TweetPoll({ options, totalVotes, expiresAt, tweetId }: any) {
 
   return (
     <div className="mt-3 border border-border rounded-2xl p-3 flex flex-col gap-2">
-      {options.map((option, i) => {
+      {options.map((option: any, i:any) => {
         const pct =
           totalVotes === 0
             ? 0

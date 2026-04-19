@@ -5,6 +5,8 @@ export interface User {
     handle: string
     email: string
     password?: string
+    avatar?: string
+    verified?: boolean
 }
 
 export const createUser = async (portfolio: User)=>{

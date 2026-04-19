@@ -9,7 +9,7 @@ interface TweetContentProps {
 }
 
 export function TweetContent({ tweet }: TweetContentProps) {
-  const type = getTweetType(tweet)
+  //const type = getTweetType(tweet)
 
 
   return (
@@ -54,7 +54,7 @@ export function TweetContent({ tweet }: TweetContentProps) {
           </div>
         )}
 
-      {type === 'poll' && tweet.poll && (
+      { tweet.poll && (
         <TweetPoll
           options={tweet.poll.options}
           totalVotes={tweet.poll.totalVotes}
@@ -63,7 +63,6 @@ export function TweetContent({ tweet }: TweetContentProps) {
         />
       )}
 
-      {/* type === 'text' → nothing extra renders */}
     </div>
   )
 }

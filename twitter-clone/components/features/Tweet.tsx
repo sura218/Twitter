@@ -4,7 +4,7 @@ import { TweetComposer } from "./TweetCompose";
 import { useQuery } from "@tanstack/react-query";
 import { getTweets, Tweet } from "@/utils/tweet";
 
-export default function Tweet() {
+export default function TweetPage() {
 
   const { data, isLoading, error } = useQuery<Tweet[]>({
     queryKey: ['tweets'],

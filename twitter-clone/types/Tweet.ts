@@ -1,5 +1,5 @@
 // types/tweet.ts
-export interface TweetType {
+export interface Tweet {
   id: string
   author: {
     name: string
